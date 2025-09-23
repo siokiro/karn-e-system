@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karn-E - Ka Ed Meat Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                🍖 Karn-E
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/cart">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-danger">Welcome to Karn-E</h1>
+            <p class="lead">Ka Ed Meat Shop - Quality Meat, Easy Ordering</p>
+            <p>Fresh meat delivered straight to you. Order online and skip the line!</p>
+            <a href="/products" class="btn btn-danger btn-lg mt-3">Start Ordering</a>
+        </div>
+    </section>
+
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature-item p-4">
+                        <h3>🛒 Easy Ordering</h3>
+                        <p>Browse our fresh meat selection and order in just a few clicks</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item p-4">
+                        <h3>📱 Mobile Friendly</h3>
+                        <p>Order from your smartphone, tablet, or computer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item p-4">
+                        <h3>⚡ Fast Service</h3>
+                        <p>Quick order processing and preparation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-preview bg-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Fresh Meat Selection</h2>
+            <div class="row" id="featuredProducts">
+                <div class="col-12 text-center">
+                    <div class="loading-spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="/products" class="btn btn-outline-danger">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Karn-E - Ka Ed Meat Shop. All rights reserved.</p>
+            <p>Villarica Rd. Tabing-Ilog Supermarket, Marilao, Bulacan</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
