@@ -456,7 +456,7 @@ footer {
 /* Loading Spinners */
 .loading-spinner-small {
     display: inline-block;
-    margin: 0px;
+    margin: 0;
     width: 16px;
     height: 16px;
     border: 2px solid #f3f3f3;
