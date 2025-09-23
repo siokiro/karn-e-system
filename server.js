@@ -7,8 +7,22 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// In server.js, add environment detection
+const isProduction = process.env.NODE_ENV === 'production';
+
+if (isProduction) {
+    console.log('🚀 Running in production mode');
+    // Add production-specific settings
+} else {
+    console.log('🔧 Running in development mode');
+}
 
 // Add CORS for cross-device access
 app.use((req, res, next) => {
