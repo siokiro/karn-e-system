@@ -1,3 +1,6 @@
+// For sensitive data
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'kaedmeat2024';
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
