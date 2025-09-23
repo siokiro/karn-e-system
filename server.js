@@ -1,44 +1,18 @@
-// For sensitive data
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'kaedmeat2024';
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+const express = require("express");
+const path = require("path");
 
 const app = express();
+
+// Serve static files (HTML, CSS, JS from /public or similar)
+app.use(express.static(path.join(__dirname, "public")));
+
+// Default route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// ✅ Use Render's assigned PORT (fallback to 3000 for local dev)
 const PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true }));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// In server.js, add environment detection
-const isProduction = process.env.NODE_ENV === 'production';
-
-if (isProduction) {
-    console.log('🚀 Running in production mode');
-    // Add production-specific settings
-} else {
-    console.log('🔧 Running in development mode');
-}
-
-// Add CORS for cross-device access
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    next();
-});
-
-// Your existing API routes and functions here...
-// ... [keep all your existing code]
-
-// Start server with 0.0.0.0 for external access
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🍖 Karn-E Server running on port ${PORT}`);
-    console.log(`🌐 Access your system at: http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
