@@ -1,21 +1,20 @@
 {
-  "name": "karn-e-meat-shop",
+  "name": "karn-e-system",
   "version": "1.0.0",
   "description": "Web-based ordering system for Ka Ed Meat Shop",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo 'No build step required'"
+    "setup": "npm install && mkdir -p data images/meats css js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "path": "^0.12.7"
+    "express": "^4.18.2"
   },
-  "keywords": ["meat-shop", "ordering", "inventory"],
-  "author": "Karn-E Team",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18.0.0"
-  }
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["meat-shop", "ordering-system", "inventory", "web-based"],
+  "author": "Karn-E Development Team",
+  "license": "MIT"
 }
