@@ -64,9 +64,27 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadFeaturedProducts() {
     try {
         const response = await fetch('/api/products');
+        
+        // Check if response is OK
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        // Check if response is JSON
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error('Server returned HTML instead of JSON');
+        }
+        
         const products = await response.json();
         
+        // Check if featuredProducts element exists
         const featuredContainer = document.getElementById('featuredProducts');
+        if (!featuredContainer) {
+            console.log('Featured products container not found');
+            return;
+        }
+        
         featuredContainer.innerHTML = '';
         
         // Show first 6 products
@@ -77,7 +95,6 @@ async function loadFeaturedProducts() {
                 <div class="card product-card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text text-muted text-uppercase small">${product.category}</p>
                         <p class="card-text text-danger fw-bold fs-4">₱${product.price}/${product.unit}</p>
                         <p class="card-text">
                             <small class="text-muted">Stock: ${product.stock}${product.unit}</small>
@@ -91,9 +108,23 @@ async function loadFeaturedProducts() {
             `;
             featuredContainer.appendChild(productCol);
         });
+        
     } catch (error) {
         console.error('Error loading featured products:', error);
-        featuredContainer.innerHTML = '<div class="col-12 text-center"><p>Error loading products. Please try again.</p></div>';
+        
+        // Show user-friendly error message
+        const featuredContainer = document.getElementById('featuredProducts');
+        if (featuredContainer) {
+            featuredContainer.innerHTML = `
+                <div class="col-12 text-center">
+                    <div class="alert alert-warning">
+                        <h5>⚠️ Temporary Issue</h5>
+                        <p>Products loading slowly. <a href="/products" class="alert-link">Try products page</a></p>
+                        <button onclick="location.reload()" class="btn btn-sm btn-outline-danger">Retry</button>
+                    </div>
+                </div>
+            `;
+        }
     }
 }
 
