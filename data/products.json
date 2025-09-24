@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Kasim",
+      "price": 300,
+      "category": "pork",
+      "unit": "kg",
+      "description": "Shoulder part",
+      "image": "kasim.jpg",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Pigue",
+      "price": 300,
+      "category": "pork", 
+      "unit": "kg",
+      "description": "Hind leg or ham",
+      "image": "pigue.jpg",
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Liempo",
+      "price": 390,
+      "category": "pork",
+      "unit": "kg", 
+      "description": "Belly portion, fatty with meat",
+      "image": "liempo.jpg",
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Laman Loob",
+      "price": 360,
+      "category": "offal",
+      "unit": "kg",
+      "description": "Internal organs - liver, intestine, heart",
+      "image": "laman-loob.jpg",
+      "available": true
+    },
+    {
+      "id": 5, 
+      "name": "Pata",
+      "price": 310,
+      "category": "pork",
+      "unit": "kg",
+      "description": "Leg or knuckles",
+      "image": "pata.jpg",
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "Tadyang (Ribs)",
+      "price": 429, 
+      "category": "pork",
+      "unit": "kg",
+      "description": "Pork ribs",
+      "image": "tadyang.jpg",
+      "available": true
+    },
+    {
+      "id": 7,
+      "name": "Lomo", 
+      "price": 330,
+      "category": "pork",
+      "unit": "kg",
+      "description": "Loin part",
+      "image": "lomo.jpg",
+      "available": true
+    },
+    {
+      "id": 8,
+      "name": "Maskara",
+      "price": 295,
+      "category": "offal", 
+      "unit": "kg",
+      "description": "Face part",
+      "image": "maskara.jpg",
+      "available": true
+    },
+    {
+      "id": 9,
+      "name": "Tainga",
+      "price": 360,
+      "category": "offal",
+      "unit": "kg",
+      "description": "Ears", 
+      "image": "tainga.jpg",
+      "available": true
+    }
+  ]
+}

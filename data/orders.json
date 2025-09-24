@@ -1,0 +1,48 @@
+{
+  "orders": [
+    {
+      "id": 1001,
+      "customerName": "Juan Dela Cruz",
+      "customerPhone": "09123456789",
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Kasim",
+          "quantity": 2,
+          "price": 300,
+          "subtotal": 600
+        },
+        {
+          "productId": 3, 
+          "productName": "Liempo",
+          "quantity": 1.5,
+          "price": 390,
+          "subtotal": 585
+        }
+      ],
+      "totalAmount": 1185,
+      "orderType": "pickup",
+      "status": "completed",
+      "orderDate": "2024-01-15T09:30:00Z",
+      "completedDate": "2024-01-15T10:15:00Z"
+    },
+    {
+      "id": 1002,
+      "customerName": "Maria Santos",
+      "customerPhone": "09198765432", 
+      "items": [
+        {
+          "productId": 5,
+          "productName": "Pata",
+          "quantity": 3,
+          "price": 310,
+          "subtotal": 930
+        }
+      ],
+      "totalAmount": 930,
+      "orderType": "pickup", 
+      "status": "pending",
+      "orderDate": "2024-01-15T10:45:00Z"
+    }
+  ]
+}
